@@ -1,8 +1,18 @@
 class Dashboard < SitePrism::Page
-  
+ 
+=begin
+
+    * Classe responável pela criação dos Objetos: - Login, e - Funcionalidades referente aos Sistemas Jenkins e Mantis
+    * Objetivo mostrar as estatísticas dos Projetos
+    * KPI Dashboard - DevOps
+    * Script - Desenvolvido por Alexandre Santos - STEFANINI - PROGRAMADOR JUNIOR
+    * Version 1.0.2 Atualizado 06/11/2018
+    
+=end
+
     def exibir(url_capa, url_sistema, usuario_mantis, senha_mantis)
 
-        
+        #objetos criados
         @login_jenkins = LoginJenkins.new
         @login_mantis = LoginMantis.new
         @funcao_jenkins = FuncionalidadeJenkins.new
@@ -71,7 +81,7 @@ class Dashboard < SitePrism::Page
 
                         @funcao_jenkins.logouf
 
-                #Ambiente Mantis
+        #Ambiente Mantis
                         visit 'http://issues.corp.stefanini.com/login_page.php'
                         @login_mantis.logar usuario_mantis, senha_mantis
 
