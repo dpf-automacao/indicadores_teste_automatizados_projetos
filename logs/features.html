@@ -467,14 +467,46 @@ function makeRed(element_id) {
 function makeYellow(element_id) {
   $('#'+element_id).css('background', '#FAF834');
   $('#'+element_id).css('color', '#000000');
-}</script></head><body><!-- Step count 0--><div class="cucumber"><div id="cucumber-header"><div id="label"><h1>Cucumber Features</h1></div><div id="summary"><p id="totals"></p><p id="duration"></p><div id="expand-collapse"><p id="expander">Expand All</p><p id="collapser">Collapse All</p></div></div></div><div class="feature"><pre class="comment"># language: pt<br/></pre><h2><span class="val">Funcionalidade: Integracao do Sistema</span></h2><p class="narrative"></p><div class='scenario'><span class="tag">@integracao_siscaer</span><span class="scenario_file">features/specs/integracao.feature:8</span><h3 id="scenario_1"><span class="keyword">Cenario:</span> <span class="val">Navegar no sistema Jenkins e no Sistema Mantis visualizando os Indicadores</span></h3><ol><li id='' class='step passed'><div class="step_name"><span class="keyword">Dado </span><span class="step val">que gostaria de visualizar os indicadores do sistema Jenkins e Mantis</span></div><div class="step_file"><span>features/step_definitions/itegracao.rb:1</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script><script>makeRed('cucumber-header');makeRed('scenario_1');</script><li id='' class='step failed'><div class="step_name"><span class="keyword">Quando </span><span class="step val">eu estou em um loop infinito</span></div><div class="step_file"><span>features/step_definitions/itegracao.rb:9</span></div><div class="message"><pre>Unable to find link "sair" (Capybara::ElementNotFound)</pre></div><div class="backtrace"><pre>./features/support/pages/funcionalidade_jenkins_page.rb:62:in `logouf'
-./features/step_definitions/itegracao.rb:73:in `block (2 levels) in <top (required)>'
-./features/step_definitions/itegracao.rb:11:in `loop'
-./features/step_definitions/itegracao.rb:11:in `"eu estou em um loop infinito"'
-features/specs/integracao.feature:11:in `Quando eu estou em um loop infinito'</pre></div><pre class="ruby"><code><span class="linenum">60</span>    def logouf
-<span class="linenum">61</span>        click_link('Jenkins')
-<span class="offending"><span class="linenum">62</span>        click_link('sair')</span>
-<span class="linenum">63</span>    end
-<span class="linenum">64</span>end
-<span class="linenum">65</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre></li> <script type="text/javascript">moveProgressBar('100.0');</script><span class="embed"><a href="" onclick="img=document.getElementById('img_1'); img.style.display = (img.style.display == 'none' ? 'block' : 'none');return false">Clique aqui para ver o print da tela</a><br>&nbsp;
-          <img id="img_1" style="display: none" src="shots/navegar-no-sistema-jenkins-e-no-sistema-mantis-visualizando-os-indicadores.png"/></span></ol></div></div><script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>3m41.089s seconds</strong>";</script><script type="text/javascript">document.getElementById('totals').innerHTML = "1 scenario (1 failed)<br />2 steps (1 failed, 1 passed)";</script></div></body></html>
+}</script></head><body><!-- Step count 0--><div class="cucumber"><div id="cucumber-header"><div id="label"><h1>Cucumber Features</h1></div><div id="summary"><p id="totals"></p><p id="duration"></p><div id="expand-collapse"><p id="expander">Expand All</p><p id="collapser">Collapse All</p></div></div></div><div class="feature"><pre class="comment"># language: pt<br/></pre><h2><span class="val">Funcionalidade: Integracao do Sistema</span></h2><p class="narrative"></p><div class='scenario'><span class="tag">@integracao</span><span class="scenario_file">features/specs/integracao.feature:8</span><h3 id="scenario_1"><span class="keyword">Cenario:</span> <span class="val">Navegar no sistema Jenkins e no Sistema Mantis visualizando os Indicadores</span></h3><ol><li id='' class='step passed'><div class="step_name"><span class="keyword">Dado </span><span class="step val">que gostaria de visualizar os indicadores do sistema Jenkins e Mantis</span></div><div class="step_file"><span>features/step_definitions/itegracao.rb:1</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script><script>makeRed('cucumber-header');makeRed('scenario_1');</script><li id='' class='step failed'><div class="step_name"><span class="keyword">Quando </span><span class="step val">eu estou em um loop infinito</span></div><div class="step_file"><span>features/step_definitions/itegracao.rb:6</span></div><div class="message"><pre>Tried to run command without establishing a connection (Selenium::WebDriver::Error::SessionNotCreatedError)</pre></div><div class="backtrace"><pre>stack backtrace:
+   0:           0x47e934 - <no info>
+   1:           0x47f0a3 - <no info>
+   2:           0x442511 - <no info>
+   3:           0x42a686 - <no info>
+   4:           0x406f5e - <no info>
+   5:           0x40cfc9 - <no info>
+   6:           0x6bef19 - <no info>
+   7:           0x420756 - <no info>
+   8:           0x6b96e0 - <no info>
+   9:     0x7ff987ce3034 - BaseThreadInitThunk
+./features/support/pages/funcionalidade_mantis_page.rb:53:in `reusumo_down'
+./features/support/pages/painel_siscaer_page.rb:90:in `block in exibir'
+./features/support/pages/painel_siscaer_page.rb:89:in `times'
+./features/support/pages/painel_siscaer_page.rb:89:in `exibir'
+./features/step_definitions/itegracao.rb:15:in `block (2 levels) in <top (required)>'
+./features/step_definitions/itegracao.rb:14:in `loop'
+./features/step_definitions/itegracao.rb:14:in `"eu estou em um loop infinito"'
+features/specs/integracao.feature:11:in `Quando eu estou em um loop infinito'</pre></div><pre class="ruby"><code><span class="linenum">-1</span># Couldn't get snippet for stack backtrace:
+<span class="linenum">0</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre></li> <script type="text/javascript">moveProgressBar('100.0');</script><div class="message"><pre>Tried to run command without establishing a connection (Selenium::WebDriver::Error::SessionNotCreatedError)</pre></div><div class="backtrace"><pre>stack backtrace:
+   0:           0x47e934 - <no info>
+   1:           0x47f0a3 - <no info>
+   2:           0x442511 - <no info>
+   3:           0x42a686 - <no info>
+   4:           0x406f5e - <no info>
+   5:           0x40cfc9 - <no info>
+   6:           0x6bef19 - <no info>
+   7:           0x420756 - <no info>
+   8:           0x6b96e0 - <no info>
+   9:     0x7ff987ce3034 - BaseThreadInitThunk
+./features/support/hooks.rb:5:in `After'</pre></div><pre class="ruby"><code><span class="linenum">-1</span># Couldn't get snippet for stack backtrace:
+<span class="linenum">0</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre><div class="message"><pre>Tried to run command without establishing a connection (Selenium::WebDriver::Error::SessionNotCreatedError)</pre></div><div class="backtrace"><pre>stack backtrace:
+   0:           0x47e934 - <no info>
+   1:           0x47f0a3 - <no info>
+   2:           0x442511 - <no info>
+   3:           0x42a686 - <no info>
+   4:           0x406f5e - <no info>
+   5:           0x40cfc9 - <no info>
+   6:           0x6bef19 - <no info>
+   7:           0x420756 - <no info>
+   8:           0x6b96e0 - <no info>
+   9:     0x7ff987ce3034 - BaseThreadInitThunk</pre></div><pre class="ruby"><code><span class="linenum">-1</span># Couldn't get snippet for stack backtrace:
+<span class="linenum">0</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre></ol></div></div><script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>4m33.032s seconds</strong>";</script><script type="text/javascript">document.getElementById('totals').innerHTML = "1 scenario (1 failed)<br />2 steps (1 failed, 1 passed)";</script></div></body></html>

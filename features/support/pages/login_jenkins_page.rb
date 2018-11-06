@@ -4,7 +4,7 @@ class LoginJenkins < SitePrism::Page
 
     * Classe responável pelo Login no Sistema Jenkins
     * Script - Desenvolvido por Alexandre Santos - STEFANINI - PROGRAMADOR JUNIOR
-    * Version 1.0.1 Atualizado 06/11/2018
+    * Version 1.0.2 Atualizado 06/11/2018
     
 =end
 

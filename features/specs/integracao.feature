@@ -4,7 +4,7 @@
 Funcionalidade: Integracao do Sistema
 
 
-@integracao_siscaer
+@integracao
 Cenario: Navegar no sistema Jenkins e no Sistema Mantis visualizando os Indicadores
 
 Dado que gostaria de visualizar os indicadores do sistema Jenkins e Mantis

@@ -6,7 +6,7 @@ class FuncionalidadeMantis < SitePrism::Page
     * Objetivo mostrar as estatísticas dos Bugs/Melhorias presente em cada projeto
     * KPI Dashboard - DevOps
     * Script - Desenvolvido por Alexandre Santos - STEFANINI - PROGRAMADOR JUNIOR
-    * Version 1.0.1 Atualizado 06/11/2018
+    * Version 1.0.2 Atualizado 06/11/2018
     
 =end   
    
