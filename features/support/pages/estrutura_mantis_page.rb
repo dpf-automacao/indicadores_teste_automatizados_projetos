@@ -1,12 +1,12 @@
-class FuncionalidadeMantis < SitePrism::Page
+class EstruturaMantis < SitePrism::Page
    
 =begin
 
-    * Classe responável pela navegação do painel Mantis
+    * Classe responável pela estrutura Mantis
     * Objetivo mostrar as estatísticas dos Bugs/Melhorias presente em cada projeto
     * KPI Dashboard - DevOps
     * Script - Desenvolvido por Alexandre Santos - STEFANINI - PROGRAMADOR JUNIOR
-    * Version 1.0.2 Atualizado 06/11/2018
+    * Version 1.0.3 Atualizado 06/12/2018
     
 =end   
    

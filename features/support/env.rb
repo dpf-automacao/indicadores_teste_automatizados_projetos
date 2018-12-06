@@ -23,3 +23,4 @@ Capybara.configure do |config|
 end
 
 Capybara.default_max_wait_time = 5
+#Capybara.page.driver.browser.manage.window.maximize

@@ -1,28 +1,37 @@
 Dado("que gostaria de visualizar os indicadores do sistema Jenkins e Mantis") do
        
-        #criaçao dos Dashboards
-        @siscaer = Dashboard.new
-        @miner = Dashboard.new
-end
-  
-Quando("eu estou em um loop infinito") do
+        #criaçao dos objetos de Dashboards
+        @siscaer = FuncionalidadesJenkins.new
+        @siscaer_mantis = FuncionalidadesMantis.new
+        @miner = FuncionalidadesJenkins.new
+        @miner_mantis = FuncionalidadesMantis.new
+
+        
+        @url_servidor = 'http://10.61.79.113:8080/login?from=%2F'
+        @login = 'admin'
+        @senha = 'admin'
        
         #setup projeto siscaer
-        @url_siscaer_capa = 'http://10.2.108.16/siscaerhome/home.html'
-        @url_siscaer_projeto = 'http://10.2.108.12:8080/job/DPF/job/SISCAER/job/PROJETO/job/siscaer/'
+        @url_siscaer_capa = 'http://10.61.79.106/siscaerhome/home.html'
+        @url_siscaer_projeto = 'http://10.61.79.113:8080/job/DPF/job/SISCAER/job/PROJETO/job/siscaer/'
         @siscaer_mantis_usuario = 'apsantos8'
         @siscaer_mantis_senha ='stefanini@10'
 
         #setup projeto miner
-        @url_miner_capa = 'http://10.2.108.16/minerhome/home.html'
-        @url_miner_projeto = 'http://10.2.108.12:8080/job/DPF/job/MINER/job/FUNCIONALIDADES/job/001-LOGIN/'
+        @url_miner_capa = 'http://10.61.79.106/minerhome/home.html'
+        @url_miner_projeto = 'http://10.61.79.113:8080/job/DPF/job/MINER/job/FUNCIONALIDADES/job/001-LOGIN/'
         @miner_mantis_usuario = 'fdalves'
         @miner_mantis_senha ='#Q121l493'
-        
-        
-        #exibição dos Dashboards ininterruptamente
-        loop do
-               @siscaer.exibir @url_siscaer_capa, @url_siscaer_projeto, @siscaer_mantis_usuario, @siscaer_mantis_senha
-               @siscaer.exibir @url_miner_capa, @url_miner_projeto, @miner_mantis_usuario, @miner_mantis_senha
-        end
 end
+  
+Quando("eu estou em um loop infinito") do
+       
+        sleep(15)
+        #execução dos Dashboards ininterruptamente
+        loop do
+               @siscaer.navegar_sistema @url_siscaer_capa, @url_servidor, @url_siscaer_projeto, @login, @senha
+               @siscaer_mantis.navegar_sistema  @siscaer_mantis_usuario, @siscaer_mantis_senha
+               @miner.navegar_sistema @url_miner_capa, @url_servidor, @url_miner_projeto, @login, @senha
+               @miner_mantis  @miner_mantis_usuario, @miner_mantis_senha
+        end
+end 

@@ -1,12 +1,12 @@
-class FuncionalidadeJenkins < SitePrism::Page
+class EstruturaJenkins < SitePrism::Page
     
 =begin
 
-    * Classe responável pela navegação do painel Jenkins
+    * Classe responável pela estrutura Jenkins
     * Objetivo mostrar as estatísticas do Jobs executados
     * KPI Dashboard - DevOps
     * Script - Desenvolvido por Alexandre Santos - STEFANINI - PROGRAMADOR JUNIOR
-    * Version 1.0.2 Atualizado 06/11/2018
+    * Version 1.0.3 Atualizado 06/12/2018
     
 =end
    
@@ -42,13 +42,20 @@ class FuncionalidadeJenkins < SitePrism::Page
     def failures
         click_link('Failures')
     end
-
+   
+    #Método logouf
+    def logouf
+        click_link 'Jenkins'
+        click_link 'sair'
+    end
+    
     #Método descer a página
     def operacao_down
         find('.pane-header > div:nth-child(2) > a:nth-child(1)').send_keys(:down)
     end
+   
     def features_down
-        find('li.active:nth-child(4) > a:nth-child(1)').send_keys(:down)
+        find('.nav > li:nth-child(4) > a:nth-child(1)').send_keys(:down)
     end
 
     def tags_down
@@ -65,11 +72,5 @@ class FuncionalidadeJenkins < SitePrism::Page
 
     def failures_down
         find('.nav > li:nth-child(8) > a:nth-child(1)').send_keys(:down)
-    end
-
-    #Método logouf
-    def logouf
-        click_link('Jenkins')
-        click_link('sair')
     end
 end
