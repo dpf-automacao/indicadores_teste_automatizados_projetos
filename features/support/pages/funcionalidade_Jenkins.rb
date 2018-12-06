@@ -34,15 +34,12 @@ class FuncionalidadesJenkins < SitePrism::Page
         @funcao_jenkins.escolhe_opcao
         
         @status = page.has_text?("Cucumber reports")
-        @funcao_jenkins.features
-                        sleep(10)
+        
 
-                if @status == false
-                        @status = page.has_text?("Error")
+                if @status == true
+                        @funcao_jenkins.reports
+                         sleep(10)
                                                
-                        @funcao_jenkins.features
-                        sleep(1)
-
                         3.times do
                                 @funcao_jenkins.features_down
                                 sleep(1)

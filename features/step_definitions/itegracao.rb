@@ -30,8 +30,8 @@ Quando("eu estou em um loop infinito") do
         #execução dos Dashboards ininterruptamente
         loop do
                @siscaer.navegar_sistema @url_siscaer_capa, @url_servidor, @url_siscaer_projeto, @login, @senha
-               @siscaer_mantis.navegar_sistema  @siscaer_mantis_usuario, @siscaer_mantis_senha
-               @miner.navegar_sistema @url_miner_capa, @url_servidor, @url_miner_projeto, @login, @senha
-               @miner_mantis  @miner_mantis_usuario, @miner_mantis_senha
+               #@siscaer_mantis.navegar_sistema  @siscaer_mantis_usuario, @siscaer_mantis_senha
+               #@miner.navegar_sistema @url_miner_capa, @url_servidor, @url_miner_projeto, @login, @senha
+               #@miner_mantis.navegar_sistema  @miner_mantis_usuario, @miner_mantis_senha
         end
 end 

@@ -23,8 +23,8 @@ class EstruturaJenkins < SitePrism::Page
         tabela[2].click
     end
     
-     def features
-      find('div.task:nth-child(9) > a:nth-child(2)').click
+     def reports
+      click_link 'Cucumber reports'
     end 
 
     def tags
@@ -55,7 +55,7 @@ class EstruturaJenkins < SitePrism::Page
     end
    
     def features_down
-        find('.nav > li:nth-child(4) > a:nth-child(1)').send_keys(:down)
+        find('li.active:nth-child(4) > a:nth-child(1)').send_keys(:down)
     end
 
     def tags_down

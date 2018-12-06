@@ -10,7 +10,7 @@ Capybara.register_driver :insecure_selenium do |app|
   
   Capybara::Selenium::Driver.new(
     app,
-    browser: :firefox,
+    browser: :chrome,
     desired_capabilities: { accept_insecure_certs: true }
   )
   
@@ -23,4 +23,4 @@ Capybara.configure do |config|
 end
 
 Capybara.default_max_wait_time = 5
-#Capybara.page.driver.browser.manage.window.maximize
+Capybara.page.driver.browser.manage.window.maximize
